@@ -1,0 +1,15 @@
+<h1>Lists#show</h1>
+<p>Find me in app/views/lists/show.html.erb</p>
+
+<strong><%= @list.name.capitalize %></strong>
+<br>
+<br>
+<% @list.movies.each do |movie| %>
+<ul>
+<li><%= movie.title %></li>
+<img src=<%=movie.poster_url%> width="300">
+</ul>
+
+<% end %>
+
+<%= link_to "Add film", new_list_bookmark_path(@list) %>

@@ -1,8 +1,12 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<% if @list.photo.attached? %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key%>')">
+ <strong><%= @list.name.capitalize %></strong>
+</div>
+<% else %>
+ <h1 class="text-center"><strong><%= @list.name.capitalize %></strong></h1>
+<% end %>
 
-<strong><%= @list.name.capitalize %></strong>
-<br>
+<%# <%= cl_image_path @list.photo.key, height: 300, width: 400, crop: :fill %>
 <br>
 <% @list.movies.each do |movie| %>
 <ul>

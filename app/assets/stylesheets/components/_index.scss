@@ -1,4 +1,14 @@
 // Import your components CSS files here.
 @import "alert";
 @import "avatar";
+@import "card";
+@import "icons";
 @import "navbar";
+
+
+body{
+  background-image: image_url("movie_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  }
